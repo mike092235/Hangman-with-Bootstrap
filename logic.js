@@ -52,9 +52,26 @@ function checkLetters(letter) {
   for(var i=0; i<numBlanks; i++){
     if(selectedWord[i] == letter) {
       isLetterInWord = true;
-      alert("Letter Found");
     }
   }
+
+  // Check where in word letter exists, then poopulate out blanksAndSuccesses array.
+  if(isLetterInWord) {
+    for (var i=0; i<numBlanks; i++) {
+      if(selectedWord[i] == letter) {
+        blanksAndSuccesses[i] == letter;
+      }
+    }
+
+  }
+  
+  //letter wasn't found
+  else {
+    wrongLetters.push(letter);
+    numGuesses--
+  }
+
+
 }
 // MAIN PROCESS
 // =====================================================================
@@ -66,6 +83,7 @@ startGame();
 
 document.onkeyup = function(event) {
   var letterGuessed = String.fromCharCode(event.keyCode).toLowerCase();
+  checkLetters(letterGuessed);
 
   // Testing / Debugging
   console.log(letterGuessed);
