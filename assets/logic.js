@@ -1,7 +1,12 @@
 // GLOBAL VARIABLES
 // =====================================================================
 // Arrays and Variables for holding data
-var wordOptions = ["bulls", "celtics", "magics", "wizards", "lakers", "nuggets"];
+var wordOptions = [
+  "bulls", "celtics", "magics", "wizards", 
+  "lakers", "nuggets", "goldenstate", "cavaliers",
+  "spurs", "knicks", "thunders", "rockets", 
+  "raptors", "heats"
+];
 var selectedWord = "";
 var lettersinWord = [];
 var numBlanks = 0;
